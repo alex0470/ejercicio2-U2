@@ -49,6 +49,15 @@ function mostrarDatos(nombre, apellidos, edad) {
     resultado.style.display = 'block'; 
 }
 
+// Cerrar
+function cerrarCaja() {
+    resultado.style.display = 'none'; 
+
+    form.reset(); 
+    nombreInput.focus();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', validarFormulario);
+    closeButton.addEventListener('click', cerrarCaja);
 });
