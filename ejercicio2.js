@@ -42,6 +42,13 @@ function validarFormulario(event) {
     }
 }
 
+// Mostrar los datos
+function mostrarDatos(nombre, apellidos, edad) {
+    document.getElementById('mostrar-nombre').textContent = `${nombre} ${apellidos}`;
+    document.getElementById('mostrar-edad').textContent = edad;
+    resultado.style.display = 'block'; 
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', validarFormulario);
 });
